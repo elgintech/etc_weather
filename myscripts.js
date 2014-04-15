@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
   // Load initial weather to be seen on the page
-  loadWeather('60115',''); //@params require: location, woeid
+  loadWeather('60120',''); //@params require: location, woeid
 
   // When submitting the zipcode, then find zipcode and reload weather content.
   $('#getWeather').submit(function(e) {
