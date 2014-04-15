@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
   // Load initial weather to be seen on the page
-  loadWeather('60115',''); //@params require: location, woeid
+
 
   // Add new javascript to pull data from the form
 
