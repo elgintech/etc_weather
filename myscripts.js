@@ -2,7 +2,7 @@
 $(document).ready(function() {
 
   // Load initial weather to be seen on the page
-  loadWeather('Seattle',''); //@params require: location, woeid
+  loadWeather('60115',''); //@params require: location, woeid
 
   // When submitting the zipcode, then find zipcode and reload weather content.
   $('#getWeather').submit(function(e) {
@@ -31,9 +31,9 @@ function loadWeather(location, woeid) {
     unit: 'f',
     success: function(weather) {
       html = '<h2><i class="icon-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.tempAlt+'&deg;C</li></ul>';
+      html += "<ul class='small-block-grid-1 medium-block-grid-3'><li><div class='details'>"+weather.city+', '+weather.region+'</div></li>';
+      html += "<li class='currently'><div class='details'>"+weather.currently+"</div></li>";
+      html += "<li><div class='details'>"+weather.tempAlt+"&deg;C</div></li></ul>";
 
       $("#weather").html(html);
     },
