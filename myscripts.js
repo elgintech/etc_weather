@@ -4,22 +4,8 @@ $(document).ready(function() {
   // Load initial weather to be seen on the page
   loadWeather('60115',''); //@params require: location, woeid
 
-  // When submitting the zipcode, then find zipcode and reload weather content.
-  $('#getWeather').submit(function(e) {
+  // Add new javascript to pull data from the form
 
-    // Find the zipcode from what was entered
-    var zipcode = $('#getWeather input').val();
-
-
-    // Pass our loadWeather function the new location
-    loadWeather(zipcode,''); //@params location, woeid
-
-    // Reset the input value
-    $('#getWeather input').val('');
-
-    // Prevent the form from submitting through
-    e.preventDefault();
-  });
 });
 
 
